@@ -25,8 +25,7 @@ var options = {
 	"port": process.env.PORT,
 	"protocol": process.env.PROTOCOL,
 	"socketio": { 
-		"wsEngine": "ws"
-
+		transports: ['websocket']
 	},
 	"sslCertPath": "",
 	"sslKeyPath": "",
