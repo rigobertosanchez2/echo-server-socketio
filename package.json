@@ -1,8 +1,11 @@
 {
   "name": "laravel-echo-server-test",
   "version": "1.0.0",
-  "description": "Servidor de Websockets, empleando laravel-echo-server",
+  "description": "Servidor de Websockets, empleando laravel-echo-server para montar en servidor",
   "main": "server.js",
+  "script": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "dotenv": "^6.0.0",
     "laravel-echo-server": "^1.3.9"
