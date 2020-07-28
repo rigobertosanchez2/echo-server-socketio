@@ -51,7 +51,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"channel\": \"test\",\r\n  \"name\": \"new\",\r\n  \"data\": {\r\n  \t\"id\":1,\r\n\t\"name\": \"Rigo\"\r\n  }\r\n}",
+					"raw": "{\r\n  \"channel\": \"test\",\r\n  \"name\": \"new\",\r\n  \"data\": {\r\n  \t\"id\":2,\r\n\t\"name\": \"Rigo\",\r\n\t\"type\" : \"Test\",\r\n\t\"comment\": \"Comentario ...\",\r\n\t\"status\": \"ok\"\r\n  }\r\n}",
 					"options": {}
 				},
 				"url": {
