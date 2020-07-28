@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "b731561f-6ae9-45ae-9cd4-c828faa1ea34",
+		"name": "laravel-echo-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 65223a8f427335468b57bbe688fb86e4"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:6001/apps/:APP_ID/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6001",
+					"path": [
+						"apps",
+						":APP_ID",
+						"status"
+					],
+					"variable": [
+						{
+							"key": "APP_ID",
+							"value": "079cb6d57b497dcd",
+							"type": "string"
+						}
+					]
+				},
+				"description": "Get total number of clients, uptime of the server, and memory usage."
+			},
+			"response": []
+		},
+		{
+			"name": "Send Event",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"channel\": \"test\",\r\n  \"name\": \"new\",\r\n  \"data\": {\r\n  \t\"id\":1,\r\n\t\"name\": \"Rigo\"\r\n  }\r\n}",
+					"options": {}
+				},
+				"url": {
+					"raw": "http://localhost:6001/apps/079cb6d57b497dcd/events?auth_key=65223a8f427335468b57bbe688fb86e4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6001",
+					"path": [
+						"apps",
+						"079cb6d57b497dcd",
+						"events"
+					],
+					"query": [
+						{
+							"key": "auth_key",
+							"value": "65223a8f427335468b57bbe688fb86e4"
+						}
+					]
+				},
+				"description": "Endpoint to send a message"
+			},
+			"response": []
+		},
+		{
+			"name": "Channel",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 65223a8f427335468b57bbe688fb86e4"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:6001/apps/:APP_ID/channels/:CHANNEL_ID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6001",
+					"path": [
+						"apps",
+						":APP_ID",
+						"channels",
+						":CHANNEL_ID"
+					],
+					"variable": [
+						{
+							"id": "372acbe6-4765-45ea-a900-340cafc69e05",
+							"key": "APP_ID",
+							"value": "079cb6d57b497dcd",
+							"type": "string"
+						},
+						{
+							"id": "f2f817e4-f1ed-4551-946f-a42570604c40",
+							"key": "CHANNEL_ID",
+							"value": "all.games",
+							"type": "string"
+						}
+					]
+				},
+				"description": "Get information about a particular channel."
+			},
+			"response": []
+		},
+		{
+			"name": "Channels",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 65223a8f427335468b57bbe688fb86e4"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:6001/apps/:APP_ID/channels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6001",
+					"path": [
+						"apps",
+						":APP_ID",
+						"channels"
+					],
+					"variable": [
+						{
+							"id": "8c4658c8-3c64-4251-ad94-51bb59059f97",
+							"key": "APP_ID",
+							"value": "079cb6d57b497dcd",
+							"type": "string"
+						}
+					]
+				},
+				"description": "List of all channels."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
